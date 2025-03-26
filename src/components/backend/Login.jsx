@@ -16,12 +16,10 @@ const Login = () => {
     formState: { errors },
   } = useForm()
 
-  //const host="10.50.47.153";
-
   const onSubmit = async (data) => {
     console.log(data)
 
-    const res = await fetch('http://10.50.47.153:8000/api/authenticate', {
+    const res = await fetch('http://localhost:8000/api/authenticate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
