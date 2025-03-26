@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Header from '../common/Header'
-import Footer from '../common/footer'
+import Footer from '../common/Footer'
 import { useForm } from 'react-hook-form'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'

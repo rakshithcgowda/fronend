@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Header from '../common/Header';
-import Footer from '../common/footer';
+import Footer from '../common/Footer';
 import { AuthContext } from './context/Auth';
 import { useNavigate } from 'react-router-dom';
 
