@@ -25,7 +25,8 @@ function Hero() {
     e.preventDefault();
     try {
       // Adjust the URL as needed (e.g., include your API base URL)
-      const response = await axios.post(' https://a0a8-2400-4f20-11-c00-cdd6-5fa7-82f7-1b09.ngrok-free.app/api/contact-now', formData);
+      const response = await axios.post('https://a0a8-2400-4f20-11-c00-cdd6-5fa7-82f7-1b09.ngrok-free.app/api/contact-now', formData);
+
       if(response.data.status) {
         setMessage(response.data.message);
         setErrors({});
