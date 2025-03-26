@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../common/Header'
-import Footer from '../common/footer'
+import Footer from '../common/Footer'
 import Servicejpg from '../../assets/images/construction3.jpg'
 
 // Fix the image assignment here: pass the imported variable directly
