@@ -2,7 +2,7 @@ import React from 'react'
 import { FaBuilding, FaUsers, FaUserFriends, FaClock } from "react-icons/fa";
 
 import Header from '../common/Header';
-import Footer from '../common/footer';
+import Footer from '../common/Footer';
 import ServiceImg from '../../assets/images/construction1.jpg';
 import constructionImg from '../../assets/images/construction2.jpg';
 import Icon1 from '../../assets/images/icon-1.svg';
