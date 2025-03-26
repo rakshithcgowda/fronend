@@ -40,7 +40,7 @@ const Footer = () => {
               <h3 className='mb-2'>Contact Us</h3>
               <ul>
               <p>123, XYZ Street, ABC City, DEF Country</p>
-              <p>Email: info@amazingconstructions.com</p>
+              <p>Email: shilpadevaconstructions@gmail.com</p>
               </ul>
 
             </div>
