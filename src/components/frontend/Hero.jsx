@@ -27,9 +27,7 @@ function Hero() {
     setLoading(true); // Set loading to true when starting submission
     try {
       // Adjust the URL as needed
-      const response = await axios.post(
-        'https://6dc4-2400-4f20-11-c00-8579-9d16-79b7-eaba.ngrok-free.app/api/contact-now', 
-        formData
+      const response = await axios.post('https://6dc4-2400-4f20-11-c00-8579-9d16-79b7-eaba.ngrok-free.app/api/contact-now',formData
       );
 
       if (response.data.status) {
