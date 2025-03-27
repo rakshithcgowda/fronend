@@ -11,6 +11,7 @@ function Hero() {
   
   const [message, setMessage] = useState(null);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false); // Added loading state
 
   // Handle input changes
   const handleChange = (e) => {
@@ -23,23 +24,28 @@ function Hero() {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when starting submission
     try {
-      // Adjust the URL as needed (e.g., include your API base URL)
-      const response = await axios.post('https://6bbc-2400-4f20-11-c00-cdd6-5fa7-82f7-1b09.ngrok-free.app/api/contact-now', formData);
+      // Adjust the URL as needed
+      const response = await axios.post(
+        'https://6bbc-2400-4f20-11-c00-cdd6-5fa7-82f7-1b09.ngrok-free.app/api/contact-now', 
+        formData
+      );
 
-      if(response.data.status) {
+      if (response.data.status) {
         setMessage(response.data.message);
         setErrors({});
         setFormData({ name: '', email: '', location: '', phone: '' });
       }
     } catch (error) {
-      if(error.response && error.response.status === 422) {
+      if (error.response && error.response.status === 422) {
         // Validation errors from Laravel
         setErrors(error.response.data.errors);
       } else {
         setMessage('An error occurred. Please try again.');
       }
     }
+    setLoading(false); // Set loading back to false when submission is complete
   };
 
   return (
@@ -58,7 +64,7 @@ function Hero() {
                   Crafting dreams with <br /> precision and excellence.
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: '1.5' }}>
-                  We excel at transforming visions into reality through outstanding craftsmanship and precise attention to detail. With years of experience and a dedication to quality.
+                  We excel at transforming visions into reality through outstanding craftsmanship and precise attention to detail.
                 </p>
                 <div className="mt-4">
                   <a href="#contact" className="btn btn-primary me-2">Download brochure</a>
@@ -133,8 +139,8 @@ function Hero() {
                     </div>
 
                     {/* Submit Button */}
-                    <button type="submit" className="btn btn-primary w-100">
-                      BOOK FREE CONSULTATION
+                    <button type="submit" className="btn btn-primary w-100" disabled={loading}>
+                      {loading ? 'Submitting...' : 'BOOK FREE CONSULTATION'}
                     </button>
                   </form>
                 </div>
