@@ -28,7 +28,7 @@ function Hero() {
     try {
       // Adjust the URL as needed
       const response = await axios.post(
-        'https://6bbc-2400-4f20-11-c00-cdd6-5fa7-82f7-1b09.ngrok-free.app/api/contact-now', 
+        'https://6dc4-2400-4f20-11-c00-8579-9d16-79b7-eaba.ngrok-free.app/api/contact-now', 
         formData
       );
 

@@ -32,7 +32,7 @@ function PopupModal({ show, onClose }) {
     const dataToSend = { ...formData };
 
     try {
-      const response = await axios.post('https://6bbc-2400-4f20-11-c00-cdd6-5fa7-82f7-1b09.ngrok-free.app/api/contact-now', dataToSend);
+      const response = await axios.post('https://6dc4-2400-4f20-11-c00-8579-9d16-79b7-eaba.ngrok-free.app/api/contact-now', dataToSend);
 
       if (response.data.status) {
         alert('Your email has been sent successfully.');
